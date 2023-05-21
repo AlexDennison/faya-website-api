@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "36cfd64e-02df-4aa5-98f7-a06f1619cadf",
+		"name": "Faya_Ecommerce_Website APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17415949",
+		"_collection_link": "https://galactic-space-337688.postman.co/workspace/Test~951cd2ae-b3b3-41b6-bf13-7936319eeb32/collection/17415949-36cfd64e-02df-4aa5-98f7-a06f1619cadf?action=share&creator=17415949&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Customer Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"user2\",\r\n    \"last_name\" : \"two\",\r\n    \"email\": \"user2@user.com\",\r\n    \"username\": \"user2\",\r\n    \"password\": \"user2\",\r\n    \"address\": \"htmfhvmbnlfeyeblrhbefkj\",\r\n    \"phone\": \"867451315\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/customer/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Customer Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"user2\",\r\n    \"last_name\" : \"two\",\r\n    \"email\": \"user2@user.com\",\r\n    \"username\": \"user2\",\r\n    \"password\": \"user2\",\r\n    \"address\": \"htmfhvmbnlfeyeblrhbefkj\",\r\n    \"phone\": \"867451315\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/customer/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"customer",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 06:55:11 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.6.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "452"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User Created\",\n    \"results\": {\n        \"id\": 3,\n        \"password\": \"pbkdf2_sha256$260000$LcJRfBqVh62WVKkoVdJ0sK$Dx+aHZYpSUcqIIqZjdqoDYE74B4dgJKB/FXZhyVsiUY=\",\n        \"last_login\": null,\n        \"is_superuser\": false,\n        \"username\": \"user2\",\n        \"first_name\": \"user2\",\n        \"last_name\": \"two\",\n        \"email\": \"user2@user.com\",\n        \"is_staff\": false,\n        \"is_active\": true,\n        \"date_joined\": \"2023-05-21T06:55:11.658098Z\",\n        \"address\": \"htmfhvmbnlfeyeblrhbefkj\",\n        \"phone\": \"867451315\",\n        \"groups\": [],\n        \"user_permissions\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Customer Update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"user rwo\",\r\n    \"last_name\" : \"22222\",\r\n    \"email\": \"user2@user2.com\",\r\n    \"address\": \"abcdefg\",\r\n    \"phone\": \"111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/customer/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/customer/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/customer/detail/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer",
+						"detail",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Customer Detail",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/customer/detail/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"customer",
+								"detail",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 06:55:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.6.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "376"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Details of Customer\",\n    \"results\": {\n        \"id\": 2,\n        \"password\": \"user1\",\n        \"last_login\": null,\n        \"is_superuser\": false,\n        \"username\": \"user1\",\n        \"first_name\": \"user1\",\n        \"last_name\": \"one\",\n        \"email\": \"user1@user.com\",\n        \"is_staff\": false,\n        \"is_active\": true,\n        \"date_joined\": \"2023-05-21T06:52:04.730310Z\",\n        \"address\": \"htmfhvmbnlfeyeblrhbefkj\",\n        \"phone\": \"656592321\",\n        \"groups\": [],\n        \"user_permissions\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Customer Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/customer/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\": \"Clothes\",\r\n    \"product_price\" : 50,\r\n    \"product_quantity\": 20,\r\n    \"customer_id\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/product/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_price\" : 10,\r\n    \"product_quantity\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/product/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/product/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/product/detail/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"detail",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/product/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
